@@ -2,7 +2,9 @@
 
 ## Prerequisite
 
-`pip3 install -r requirements.txt`
+```bash
+pip3 install -r requirements.txt
+```
 
 ## Tech
 
@@ -20,12 +22,19 @@ The smtplib module defines an SMTP client session object that can be used to sen
 
 Get historical data, all you need to do is typing:
 
-`python3 main.py`
+```bash
+python3 main.py
+```
 
 Get a specific year, adding year after the `main.py`:
 
-`python3 main.py 2018`
+```bash
+python3 main.py 2018
+```
 
 Monitor the wikipedia of `{year}` FIFA World Cup
 
-`python3 main.py m-2022` (pending --> Google API)
+```bash
+python3 main.py m-2022
+``` 
+(pending --> Google API)

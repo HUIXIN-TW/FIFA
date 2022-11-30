@@ -15,9 +15,11 @@ else:
     print("Try: python3 main.py {year} to get the date in a specific year. Or python3 main.py to get all data.")
     sys.exit(1)
 
+gFile.historical_data(years)
+
 # test
 # print(gFile.historical_data(years))
 
-with open("email.json") as f:
-    data = json.load(f)
-    print(mChange.send_email(data))
+# with open("email.json") as f:
+#     data = json.load(f)
+#     print(mChange.send_email(data))

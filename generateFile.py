@@ -25,7 +25,6 @@ def get_matches_by_year(yr):
     score = []
     date = []
     
-    print(matches[0])
     for match in matches:
         # get each match
         home.append(match.find('th', class_='fhome').get_text())
