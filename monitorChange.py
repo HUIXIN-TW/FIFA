@@ -23,27 +23,7 @@ def monitor_fifa_by_year(year):
             continue
 
         else:
-            msg = 'Subject: This is Huixin\'s script talking, FIFA News!'
-            # set the 'from' address,
-            fromaddr = 'huixin.yang.tw@gmail.com'
-            # set the 'to' addresses,
-            toaddrs  = ['huixin.yang.tw@gmail.com','huixin.yang.tw@gmail.com']
-
-            # setup the email server,
-            server = smtplib.SMTP('smtp.gmail.com', 587)
-            server.starttls()
-            server.login("YOUR_EMAIL_ADDRESS", "YOUR_PASSWORD")
-
-            # Print the email's contents
-            print('From: ' + fromaddr)
-            print('To: ' + str(toaddrs))
-            print('Message: ' + msg)
-
-            # send the email
-            # server.sendmail(fromaddr, toaddrs, msg)
-            # disconnect from the server
-            # server.quit()
-
+            send_email(user())
             break
         
 def get_response(url):
@@ -58,3 +38,18 @@ def user():
     with open("email.json") as f:
         data = json.load(f)
     return data
+
+def send_email(setting):
+    msg = "Subject: This is Huixin\'s script talking, FIFA News!"
+    # set the 'from' address,
+    fromaddr = setting["from_email"]
+    # set the 'to' addresses,
+    toaddrs  = setting["to_email"]
+    # setup the email server,
+    server = smtplib.SMTP("smtp.gmail.com", 587)
+    server.starttls()
+    server.login(fromaddr, setting["from_email_password"])
+    # send the email
+    server.sendmail(fromaddr, toaddrs, msg)
+    # disconnect from the server
+    server.quit()

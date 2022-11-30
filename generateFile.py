@@ -7,7 +7,7 @@ def historical_data(years):
     for year in years:
         fifa.append(get_matches_by_year(year))
     df_fifa = pd.concat(fifa, ignore_index=True)
-    df_fifa.to_csv("fifa_worldcup_historical_data.csv", index=False)
+    df_fifa.to_csv("fifa_results.csv", index=False)
 
 def get_matches_by_year(yr):
     web = f'https://en.wikipedia.org/wiki/{yr}_FIFA_World_Cup'
