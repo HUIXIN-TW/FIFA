@@ -38,3 +38,5 @@ Monitor the wikipedia of `{year}` FIFA World Cup
 python3 main.py m-2022
 ``` 
 (pending --> Google API)
+
+<a href="https://www.buymeacoffee.com/huixinyang" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/default-orange.png" alt="Buy Me A Coffee" height="41" width="174"></a>
